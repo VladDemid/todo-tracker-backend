@@ -32,6 +32,7 @@ export const createTodo = asyncHandler(async (req, res) => {
       no_timer,
       theme,
       comment,
+      date: new Date(),
       author_id: +res.locals.user?.id,
     },
   });

@@ -17,11 +17,15 @@ async function main() {
   console.log("____________________________________");
 
   const PORT = process.env.PORT || 5000;
-  const allowedOrigins = ["http://localhost:3000"];
+  const allowedOrigins = [
+    "http://localhost:3006",
+    "http://localhost:3000",
+    "http://localhost:4173",
+  ];
 
   app.use(
     cors({
-      origin: ["http://localhost:5173", "http://localhost:3006"],
+      origin: "*",
       optionsSuccessStatus: 200,
     })
   );

@@ -20,7 +20,7 @@ export const authUser = asyncHandler(async (req, res) => {
       author_id: user?.id,
     },
     orderBy: {
-      id: "asc",
+      id: "desc",
     },
   });
 
